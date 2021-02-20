@@ -1,0 +1,43 @@
+section.hero#sec-hero
+  .container.hero__cont
+    header.header
+      .header__logo
+        .logo AM
+      .header__btns
+        nav.menu.header-menu
+          ul.menu__list
+            li.menu__item
+              a(href='#sec-hero').menu__link Главная
+            li.menu__item
+              a(href='#sec-user').menu__link Обо мне                   
+            li.menu__item
+              a(href='#sec-skills').menu__link Навыки                  
+            li.menu__item
+              a(href='#sec-slider').menu__link Работы                  
+            li.menu__item
+              a(href='#reviews').menu__link Отзывы                    
+            li.menu__item
+              a(href='#sec-form').menu__link Связаться      
+
+      
+      ul.socials.header-socials
+        li.socials__item
+          a(href="https://vk.com/alim_mambetov" target="blank").socials__li
+            +icon("vk", "socials__icon socials__icon_vk")
+        li.socials__item
+          a(href="https://github.com/Alimbo-zzz?tab=repositories" target="blank").socials__li
+            +icon("github", "socials__icon socials__icon_git")            
+      a.hamburger
+        span.hamburger__line
+       
+      include ./_components/drop-menu.pug
+
+                   
+    .hero__intro
+      .intro-user
+        .intro-user__desc Личный сайт <br> веб-разработчика
+        h1.intro-title Алим <br> Мамбетов
+    a(href='#sec-user').scroll.hero__scroll
+      p.scroll__text Скролл
+      +icon('scroll', 'scroll__icon')
+  

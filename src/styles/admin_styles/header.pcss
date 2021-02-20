@@ -1,0 +1,139 @@
+
+
+
+
+[v-cloak]{
+	display: none;
+}
+
+
+.admin-wrapper{
+	background-color: $admin_bg;
+}
+
+
+.admin-header{
+	background: rgb(215,98,5);
+    background: linear-gradient(90deg, rgba(215,98,5,1) 0%, rgba(222,134,14,1) 100%);
+    background: linear-gradient(90deg, rgba(201,80,1,1) 0%, rgba(215,98,5,1) 100%);
+}
+
+
+.admin-header__cont{
+	padding: 20px 0;
+	display:flex;
+	justify-content:space-between;
+	align-items:center;
+}
+
+
+
+
+
+.admin-user-info{
+	display:flex;
+	margin-right: 30px;
+	align-items:center;
+
+	@include phones{
+		margin-right: 15px;
+	}
+}
+
+.admin-user-logo{
+	margin-right: 25px;
+	min-width: 45px; min-height: 45px;
+	background-color: #fff;
+	border-radius:50%;
+}
+
+.admin-user-name{
+	margin-right: 25px;
+	font-size: 18px;
+	font-weight: 600;
+	color:white;
+}	
+
+
+.admin-title{
+	padding-top: 2px;
+	font-size: 14px;
+	color:#D5D5B8;
+
+	@include phones{
+		display:none;
+	}
+}
+
+
+.admin-out__link{
+	color:#D3D3D3;
+	padding: 15px;
+	text-decoration:underline;
+}
+
+
+
+
+
+/* admin-nav */
+
+.admin-nav{
+	background:white;
+}
+
+
+.admin-nav__list{
+	display:flex;
+}
+.admin-nav__el{
+	color:$gray;
+	position: relative;
+}
+
+
+.admin-nav .active{
+	color:$orange;
+	&::after{
+		transform:scaleX(1);
+	}
+}
+
+
+.admin-nav__link{
+	&::before{
+		content: attr(data-text);
+		text-align:center;
+		padding: 30px;
+		display:block;
+		font-size: 18px;
+		font-weight: 600;
+		background: transparent;
+
+		@include phones{
+			padding: 20px 15px;
+		}
+	}
+
+	&::after{
+		content:'';
+		height: 3px; width: 100%;
+		background-color:$orange;
+		position: absolute;
+		bottom: 0;left: 0;
+		transition:0.3s;
+		transform:scaleX(0);
+	}
+
+}
+
+
+
+
+
+/* ______________________________________ */
+
+
+
+
+

@@ -1,0 +1,835 @@
+  
+
+.A_head-sec{
+	display: flex;
+	align-items: center;
+	padding: 30px 0;
+
+	@include tabt_usr{
+		flex-direction:column;
+		justify-content:center;
+	}
+	margin-bottom: 50px;
+}
+
+.A_title{
+	font-size: 35px;
+	font-weight: 600;
+	margin-right: 50px;
+	letter-spacing: 1px;
+	color:$dark;
+
+	@include tabt_usr{
+		margin-bottom: 25px;
+		margin-right: 0;
+	}
+}
+
+.A_btn-add{	
+	background-color: transparent;
+	position: relative;
+	padding:8px 12px;
+	display:flex;
+	align-items:center;
+
+	&::before{
+		content:'';
+		height: 2px;
+		position: absolute;
+		background:$orange;
+		transition:0.4s;
+		bottom:0; right:0;
+		width:0%;
+	}
+
+	&:hover::before{		
+		width:100%;
+		left:0;
+	}
+}
+
+.A_btn-add__title{
+	color:$orange;
+	font-size:20px;
+	font-weight: 600;
+}
+
+.A_btn-add__plus{
+	min-width: 30px; min-height: 30px;
+	border-radius:50%;
+	background:linear-gradient(90deg, rgba(215,98,5,1) 0%, rgba(222,134,14,1) 100%);
+	color:white;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	font-weight: 600;
+	margin-right: 10px;
+	border:none;
+}
+
+.A_create-category{
+	display:flex;
+	align-items:center;
+}
+
+.A_create-category__title{
+	background: transparent;
+	color:$dark;
+	border:none;
+	border-bottom: 2px solid $orange;
+	padding: 10px 5px;
+	outline:none;
+	letter-spacing:1px;
+	font-weight:500;
+}
+
+
+.A_create-category__submit{	
+	min-width: 30px; min-height: 30px;
+	border-radius:50%;
+	background:linear-gradient(90deg, rgba(215,98,5,1) 0%, rgba(222,134,14,1) 100%);
+	color:white;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	font-weight: 600;
+	margin-left: 10px;
+	border:none;
+	outline:none;
+	cursor:pointer;
+}
+
+
+
+/* skills group */
+
+
+
+
+
+.A_about-content__block{
+	margin-bottom: 50px;
+}
+
+.A_about-skills{
+	display:grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap:50px;
+
+	@include desktop{
+		grid-template-columns: repeat(2, 1fr);
+	}
+	@include tablets{
+		grid-template-columns: repeat(1, 1fr);
+		padding: 0  100px;
+	}
+	@include tabt_usr{
+		grid-template-columns: repeat(1, 1fr);
+		padding: 0  40px;
+	}
+	@include phones{
+		grid-template-columns: repeat(1, 1fr);
+		padding: 0;
+	}
+}
+
+.A_about-item{
+	background-color: #fff;
+	box-shadow: 0px 0px 6px 2px $dark;
+	border-radius:10px;
+}
+
+
+
+.A_about-item__content{
+	padding: 20px 12px;
+    position: relative;
+    display:flex;
+    flex-direction:column;
+	justify-content:center;
+	align-items:center;
+}
+
+
+
+.A_about-add-category{
+	display:flex;
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+
+
+
+.A_about-add-skill{
+	display:flex;
+	width: 80%;
+	margin-bottom: 15px;
+}
+
+
+
+
+.A_about-skill-title2{
+	width: 100%;
+	display:block;
+	margin-right: 10px;
+	padding-left: 10px;
+	background-color:transparent;
+	border: none;
+	border-bottom: 2px solid $dark;
+	color:$dark;
+	font-weight: 600;
+	outline:none;
+}
+
+.A_about-percent-box{
+	position: relative;
+	&::before{
+		content:'%';
+		position: absolute;
+		right: 5px; top: 50%;
+		transform:translateY(-50%);
+		font-weight: 600;
+		font-size:18px;
+		color:$dark;
+		padding-bottom: 3px;
+	}
+}
+
+.A_about-skill-percent{
+	width: 50px;height: 100%;
+	display:block;
+	padding: 0 20px 0 5px;
+	background-color:transparent;
+	border: none;
+	border-bottom: 2px solid $dark;
+	color:$dark;
+	font-weight: 600;
+	outline:none;
+}
+
+.hr{
+	display:block;
+	width: 100%;
+	height: 2px;
+	margin-bottom: 15px;
+	background-color:$dark;
+	box-shadow: inset 0px 4px 9px 0px rgba(255,255,255,1);
+	border-radius:50px;
+}
+
+
+
+.A_about-item-skills{
+	display:flex;
+	flex-direction:column;
+	width: 100%;
+}
+
+
+
+
+
+/* skills group title */
+
+.A_about-add-category__block{
+	display:flex;
+    justify-content: space-between;
+    align-items:center;
+    width: 100%;
+}
+
+
+.A_about-skill-title{
+	font-size: 22px;
+	font-weight: 600;
+	color:$dark;
+	padding-left: 10px;
+	width: 220px;
+}
+
+input.A_about-skill-title{
+	border:none;
+	outline: none;
+	border-bottom: 2px solid $dark;
+}
+
+.A_btn-box{
+	display: flex;
+	justify-content:space-between;
+	align-items:center;
+	width: 60px;
+}
+
+.A_btn-box__remove{	
+    position: absolute;
+    top: 0; right: 0;
+    color: #222;
+    width: 30px; height: 30px;
+    text-align:center;
+    line-height:20px;
+    border-radius: 50%; 
+    overflow:hidden;
+    font-weight: bold;
+    color:$red;
+    transform: translate(30%, -30%);
+	box-shadow: 0px 0px 6px 2px $dark;
+	transition:0.3s;
+	font-size: 32px;
+	user-select:none;
+
+	&:hover{
+		color:white;
+	}
+}
+
+.A_btn-box__edit{
+	width: 25px;height: 25px;
+	background: svg-load('pencil.svg', fill=#BFBFBF, width=100%, height=100%) center no-repeat;
+	transition:0.3s;
+	background-size:90%;
+
+	&:hover{
+		background: svg-load('pencil.svg', fill=$green, width=100%, height=100%) center no-repeat;
+
+	}
+
+}
+
+
+.A_btn-box__trash{
+	width: 25px;height: 25px;
+	background: svg-load('trash.svg', fill=#BFBFBF, width=100%, height=100%) center no-repeat;
+	transition:0.3s;
+	background-size:90%;
+
+	&:hover{
+		background: svg-load('trash.svg', fill=$red, width=100%, height=100%) center no-repeat;
+
+	}
+}
+
+
+.A_btn-box__reset{
+	width: 25px;height: 25px;
+	border:2px solid $red;
+	background: svg-load('close.svg', fill=#C95048, width=100%, height=100%) center no-repeat;
+	background-size: 65%;	
+	border-radius: 50%;
+	transition:0.3s;
+
+	&:hover{
+		background: $red svg-load('close.svg', fill=#fff, width=100%, height=100%) center no-repeat;
+	}
+}
+
+
+.A_btn-box__submit{
+	width: 25px;height: 25px;
+	border:2px solid $green;
+	background: svg-load('tick.svg', fill=#2AB34F, width=100%, height=100%) center no-repeat;
+	background-size:76%;
+	border-radius: 50%;
+	transition:0.3s;
+
+	&:hover{
+		background: $green svg-load('tick.svg', fill=#fff, width=100%, height=100%) center no-repeat;
+	}
+}
+
+
+
+
+
+
+
+/* skills item */
+
+
+
+
+
+
+
+
+
+
+/* 
+sec-admin-about
+
+
+
+
+.sec-admin-about{
+	padding-bottom: 50px;
+
+	.title_admin{
+		margin: 0;
+	}
+}
+
+
+
+.admin-head-about{
+	display:flex;
+	align-items:center;
+	margin: 50px 0;
+
+	@include phones{
+		flex-direction:column;
+		justify-content:center;
+		align-items:flex-start;
+	}
+
+}
+
+
+
+.title_admin{
+	color:$gray;
+	margin: 50px 0;
+	font-size:25px;
+
+}
+
+
+
+
+.admin-add-btn-title{
+	letter-spacing: 2px;
+	font-weight: 600;
+}
+
+.admin-add-btn-plus{
+	min-width: 25px; min-height: 25px;
+	border-radius:50%;
+	background:linear-gradient(90deg, rgba(215,98,5,1) 0%, rgba(222,134,14,1) 100%);
+	color:white;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	font-weight: 600;
+}
+
+
+.admin-add-btn{	
+	padding: 12px;
+	display:flex;
+	background-color:transparent;
+	cursor:pointer;
+
+}
+
+
+
+.admin-add-btn_about{
+	margin-left: 50px;
+	justify-content:center;
+	align-items:center;
+	border-radius:50px;
+
+	@include phones{
+		margin-left: 0;
+		margin-top: 10px;
+	}
+
+	.admin-add-btn-title{
+		color:$orange;
+		margin-left: 10px;
+	}
+}
+
+.admin-add-btn_about-title {
+	margin-right: 10px;
+	width: 25px; height: 25px;
+	color:white;
+}
+
+
+
+
+
+
+
+
+
+admin-about-content
+
+
+
+.admin-about-content__list{
+	display:grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap:50px;
+
+	@include laptop{
+		grid-gap:20px;
+	}
+
+	@include admin_fix{
+		grid-template-columns: repeat(14, 1fr);
+	}
+}
+
+
+
+
+
+
+.admin-about-content__el{
+	background-color: #fff;
+	padding:25px;
+	border-radius:10px;
+
+	@include laptop{
+		padding: 20px 10px; 
+	}
+
+	@include admin_fix{
+		grid-column:4/ span 8;
+	}
+
+	@include tabt_usr{
+		grid-column: 2/ span 12;
+	}
+
+	@include phones{
+		grid-column: 1/ all;
+	}
+}
+
+.admin-about-add-group{
+	display:flex;
+	padding: 0px 8px 25px 8px;
+	position: relative;
+	justify-content:space-between;
+	align-items:center;
+	position: relative;
+
+	&::before{
+		content:'';
+		display:block;
+		width: 100%; height: 3px;
+		background-color: rgba(118,117,127,0.4);
+		box-shadow: inset 0px -1px 2px 1px #fff;
+		position: absolute;
+		bottom: 0;left: 0;
+	}
+}
+
+.admin-add-group{	
+	display:block;
+	font-size:18px;
+	font-weight: 600;
+	color:$gray;
+	padding: 10px 0;
+	border:none;
+	outline: none;
+	background-color:transperent;
+	line-height: 25px;
+}
+
+
+.admin-add-group_inp-title{
+	width: 280px;
+	border-bottom:1.5px solid $gray;
+
+	@include laptop{
+		width: 180px;
+	}
+}
+
+
+
+.admin-add-group_title{
+	width: 280px;
+	background-color:transperent;
+
+	@include laptop{
+		width: 180px;
+	}
+}
+
+
+
+
+
+
+admin-about-add-group__btns
+
+
+.admin-btns{
+	min-width: 70px;
+	margin-left: 20px;
+	display:flex;
+	justify-content:space-around;
+	align-items:center;
+
+}
+
+
+.admin-btn-mod{
+	display:block;
+	width: 25px; height: 25px;
+	background-color:#222;
+	cursor:pointer;
+}
+
+
+
+
+admin-about-skills
+
+
+
+
+.admin-about-skills{
+	width: 100%;
+	max-height:380px; min-height:200px;
+	margin: 25px 0;
+}
+
+
+
+.admin-about-skills__el{
+	display:flex;
+	margin-bottom: 20px;
+}
+
+
+
+
+.admin-about-skills__el {
+	.admin-add-group{
+		width: 100%;
+	}
+	
+
+	.admin-about-skills-add__box{
+		margin-left: 30px;
+	}
+	
+
+	.admin-about-add-group__btns{
+		margin-left: 50px;
+	}
+
+}
+
+
+
+
+
+admin-about-skills-add
+
+
+
+
+.admin-about-skills-add{
+	display:flex;
+	justify-content:flex-end;
+}
+
+
+
+
+.admin-add-btn-plus_skill{
+	min-width: 40px; min-height: 40px;
+	max-width: 40px; max-height: 40px;
+	font-size: 25px;
+	margin-left: 30px;
+	position: relative;
+}
+
+
+.admin-about-skills-add__box{
+	position: relative;
+	margin-left: 10px;
+
+	&::after{
+		content:'%';
+		display:block;
+		position: absolute;
+		right: 10px; top: 12px;
+		font-size: 16px;
+		font-weight: 400;
+		color:$white;
+	}
+
+}
+
+.admin-add-group_inp-percent{
+	max-width: 72px;
+	min-width: 72px;
+	font-size: 16px;
+	font-weight: 400;
+	padding-left: 15px;
+	padding-right: 25px;
+	border-bottom:1.5px solid $gray;
+	&::-webkit-outer-spin-button,
+	&::-webkit-inner-spin-button {
+    	-webkit-appearance: none;
+	}
+}
+
+
+.admin-add-group_percent{
+	min-width: 72px;
+	max-width: 72px;
+	font-size: 16px;
+	font-weight: 400;
+	padding-left: 15px;
+	padding-right: 25px;
+	&::-webkit-outer-spin-button,
+	&::-webkit-inner-spin-button {
+    	-webkit-appearance: none;
+	}
+}
+
+
+.admin-add-group_inp-name{
+	width: 200px;
+	font-size: 16px;
+	font-weight: 400;
+	padding-left: 15px;
+	border-bottom:1.5px solid $gray;
+
+	@include laptop{
+		width: 160px;
+	}
+}
+
+
+.admin-add-group_name{
+	width: 200px;
+	font-size: 16px;
+	font-weight: 400;
+	padding-left: 15px;
+
+	@include laptop{
+		width: 160px;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+SVG
+
+
+
+.admin-btn-mod_fix{
+	background: svg-load('pencil.svg', fill=#BFBFBF, width=100%, height=100%) center no-repeat;
+	position: relative;
+
+	&::before{
+		content:"♦";
+		color:#BFBFBF;
+		position: absolute;
+		left: 40%;top: -23px;
+		transform: rotate(90deg);
+		transition:0.3s;
+		font-size: 20px;
+		opacity:0;
+	}
+	&:hover::before{
+		opacity:1;
+	}
+
+}
+
+
+.admin-btn-mod_remove{
+	background: svg-load('trash.svg', fill=#BFBFBF, width=100%, height=100%) center no-repeat;
+	position: relative;
+
+	&::before{
+		content:"♦";
+		color:#BFBFBF;
+		position: absolute;
+		left: 34%;top: -23px;
+		transform: rotate(90deg);
+		transition:0.3s;
+		font-size: 20px;
+		opacity:0;
+	}
+	&:hover::before{
+		opacity:1;
+	}
+
+}
+
+
+
+.admin-btn-mod_tick{
+	background: svg-load('tick.svg', fill=#2AB34F, width=100%, height=100%) center no-repeat;
+	position: relative;
+
+	&::before,&::after{
+		content:"";
+		display:block;
+		transition:0.3s;
+		position: absolute;
+		height: 4px; width: 100%;
+		background-color:#2AB34F;
+		opacity:0;
+	}
+
+	&::before{
+		bottom: -5px;left: 0;
+	}
+	&::after{
+		top: -5px;left: 0;
+	}
+
+	
+	&:hover::before,
+	&:hover::after{
+			opacity:1;
+		}
+
+}
+
+
+.admin-btn-mod_close{
+	background: svg-load('close.svg', fill=#C95048, width=100%, height=100%) center no-repeat;
+	background-size: 88%;
+	position: relative;
+
+	&::before,&::after{
+		content:"";
+		display:block;
+		transition:0.3s;
+		position: absolute;
+		height: 4px; width: 100%;
+		background-color:#C95048;
+		opacity:0;
+	}
+
+	&::before{
+		bottom: -5px;left: 0;
+	}
+	&::after{
+		top: -5px;left: 0;
+	}
+
+	
+	&:hover::before,
+	&:hover::after{
+			opacity:1;
+		}
+
+
+}
+
+
+ */
